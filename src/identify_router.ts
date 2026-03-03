@@ -14,4 +14,10 @@ router.post("/", async (req: Request, res: Response) => {
   }
 });
 
+router.get("/", (req, res) => {
+  res
+    .status(200)
+    .send("This endpoint accepts only POST requests with JSON body.");
+});
+
 export default router;
